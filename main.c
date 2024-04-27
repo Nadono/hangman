@@ -1,4 +1,15 @@
 #include <stdio.h>
-int main(){
+#include "hangman.h"
+#include <time.h>
+#include <stdlib.h>
 
+int main(){
+    srand(time(NULL));
+    char secret[16];
+    get_word(secret);
+    printf("%s\n",secret);
+    
+    hangman(secret); 
+
+    return 0;
 }
